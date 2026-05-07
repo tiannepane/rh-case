@@ -152,96 +152,20 @@ function Screen0A({ onGoSignIn, onSignIn }: { onGoSignIn: () => void; onSignIn: 
       <main style={{ paddingTop: 64, paddingBottom: 64, display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div style={{ textAlign: "center", marginBottom: 8 }}>
           <h1 style={{ fontSize: 32, fontWeight: 700, color: "#000", marginBottom: 12, lineHeight: 1.2 }}>
-            Canada&apos;s best mortgage rates
+            Canada&apos;s one-stop shop for all financial needs
           </h1>
           <p style={{ fontSize: 16, color: "#111", margin: 0 }}>
-            Compare rates from 50+ lenders in minutes
+            From mortgages to insurance, credit cards to investments - everything you need to make smart financial decisions, all in one place.
           </p>
         </div>
 
-        <div
-          style={{
-            background: "#fff",
-            border: "1px solid #e5e5e5",
-            borderRadius: 4,
-            padding: 32,
-            boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
-            maxWidth: 720,
-            width: "100%",
-            margin: "32px auto 0",
-          }}
-        >
-          <label style={{ display: "block", fontSize: 14, color: "#111", marginBottom: 8, fontWeight: 500 }}>
-            Mortgage amount
-          </label>
-          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-            <input
-              readOnly
-              value="$400,000"
-              style={{
-                flex: 1,
-                border: "1px solid #e5e5e5",
-                borderRadius: 4,
-                padding: "10px 14px",
-                fontSize: 16,
-                color: "#111",
-                background: "#fafafa",
-                outline: "none",
-              }}
-            />
-            <button
-              style={{
-                background: "#0077B6",
-                color: "#fff",
-                border: "none",
-                borderRadius: 4,
-                padding: "10px 24px",
-                fontSize: 16,
-                fontWeight: 500,
-                cursor: "pointer",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Compare rates
-            </button>
-          </div>
-        </div>
+        <img
+          src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1200&q=80"
+          alt="Happy Canadian family at home"
+          style={{ width: "100%", maxWidth: 860, height: 380, objectFit: "cover", borderRadius: 16, display: "block", margin: "32px auto 0" }}
+        />
 
-        <div
-          style={{
-            maxWidth: 720,
-            width: "100%",
-            margin: "16px auto 0",
-            background: "#EFF6FF",
-            border: "1px solid #BFDBFE",
-            borderRadius: 8,
-            padding: "16px 24px",
-            display: "flex",
-            alignItems: "center",
-            gap: 16,
-          }}
-        >
-          <span style={{ fontSize: 20, flexShrink: 0 }}>🔒</span>
-          <p style={{ fontSize: 15, color: "#111", flex: 1, margin: 0 }}>
-            Sign in to see personalized insights based on your mortgage profile and renewal date
-          </p>
-          <button
-            onClick={onSignIn}
-            style={{
-              background: "#0077B6",
-              color: "#fff",
-              border: "none",
-              borderRadius: 4,
-              padding: "10px 20px",
-              fontSize: 15,
-              fontWeight: 500,
-              cursor: "pointer",
-              flexShrink: 0,
-            }}
-          >
-            Sign in
-          </button>
-        </div>
+
       </main>
     </div>
   );
@@ -273,9 +197,7 @@ function Screen0B({ onSignedIn, onGoHome }: { onSignedIn: () => void; onGoHome: 
           <h2 style={{ fontSize: 24, fontWeight: 600, color: "#000", textAlign: "center", marginBottom: 8 }}>
             Welcome back
           </h2>
-          <p style={{ fontSize: 15, color: "#111", textAlign: "center", marginBottom: 28, lineHeight: 1.5 }}>
-            Sign in to access your personalized mortgage dashboard
-          </p>
+
 
           <button
             onClick={onSignedIn}
@@ -521,18 +443,30 @@ function OverviewContent({
               <div style={{ fontSize: 11, fontWeight: 600, color: "#0077B6", letterSpacing: "0.8px", textTransform: "uppercase", marginBottom: 10 }}>Mortgage Amount</div>
               <div style={{ fontSize: 36, fontWeight: 700, color: "#000", lineHeight: 1, marginBottom: 8 }}>$487,000</div>
               <div style={{ fontSize: 13, color: "#000", fontWeight: 400, lineHeight: 1.5 }}>5-year fixed at 2.14%</div>
+              <div style={{ borderTop: "1px solid #F0F0F0", margin: "10px 0" }} />
+              <div style={{ fontSize: 12, color: "#888", fontWeight: 400 }}>
+                <span style={{ color: "#0077B6" }}>↗</span> Renews September 3, 2026
+              </div>
             </div>
 
             <div style={{ background: "#FFFFFF", border: "1px solid #E8E8E8", borderRadius: 12, padding: "24px 28px" }}>
               <div style={{ fontSize: 11, fontWeight: 600, color: "#0077B6", letterSpacing: "0.8px", textTransform: "uppercase", marginBottom: 10 }}>Best Rate Today</div>
               <div style={{ fontSize: 36, fontWeight: 700, color: "#000", lineHeight: 1, marginBottom: 8 }}>4.19%</div>
               <div style={{ fontSize: 13, color: "#000", fontWeight: 400, lineHeight: 1.5 }}>Down from 4.34% last month</div>
+              <div style={{ borderTop: "1px solid #F0F0F0", margin: "10px 0" }} />
+              <div style={{ fontSize: 12, color: "#888", fontWeight: 400 }}>
+                <span style={{ color: "#16A34A" }}>↓</span> 0.15% lower than 30 days ago
+              </div>
             </div>
 
             <div style={{ background: "#FFFFFF", border: "1px solid #E8E8E8", borderRadius: 12, padding: "24px 28px" }}>
-              <div style={{ fontSize: 11, fontWeight: 600, color: "#0077B6", letterSpacing: "0.8px", textTransform: "uppercase", marginBottom: 10 }}>Est. Monthly Change</div>
-              <div style={{ fontSize: 36, fontWeight: 700, color: "#0077B6", lineHeight: 1, marginBottom: 8 }}>+$612</div>
-              <div style={{ fontSize: 13, color: "#000", fontWeight: 400, lineHeight: 1.5 }}>At today&apos;s best rate of 4.19%</div>
+              <div style={{ fontSize: 11, fontWeight: 600, color: "#0077B6", letterSpacing: "0.8px", textTransform: "uppercase", marginBottom: 10 }}>New Monthly Payment</div>
+              <div style={{ fontSize: 36, fontWeight: 700, color: "#000", lineHeight: 1, marginBottom: 8 }}>$2,619</div>
+              <div style={{ fontSize: 13, color: "#000", fontWeight: 400, marginBottom: 12 }}>At today&apos;s best rate of 4.19%</div>
+              <div style={{ borderTop: "1px solid #F0F0F0", marginBottom: 10 }} />
+              <div style={{ fontSize: 12, color: "#888", fontWeight: 400 }}>
+                <span style={{ color: "#DC2626" }}>↑</span> $521/mo more than your current payment
+              </div>
             </div>
           </div>
         </div>
@@ -1040,7 +974,7 @@ function MortgageForm({ onCancel, onSubmit }: { onCancel: () => void; onSubmit: 
 
 // ─── Screen 1 — Dashboard shell (Overview default) ───────────────────────────
 function Screen1({ onGoHome }: { onGoHome: () => void }) {
-  const [activeNav, setActiveNav] = useState("Overview");
+  const [activeNav, setActiveNav] = useState("Mortgage");
   const [demoState, setDemoState] = useState<DemoState>("existing");
   const [showMortgageForm, setShowMortgageForm] = useState(false);
 
